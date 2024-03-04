@@ -2,14 +2,24 @@ html,
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #242424;
-  color: white;
+  color: #b2b2b2;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
 a {
-  color: white;
+  color: #b2b2b2;
 }
 
 a:hover {
-  color: #00ee10;
+  color: #00d8ff;
 }

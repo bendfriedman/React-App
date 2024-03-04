@@ -1,25 +1,89 @@
-/* #root {
+#root {
   margin: 0 auto;
-} */
+  width: 100%;
+  height: 100%;
+}
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
-  background-color: blueviolet;
+  background-color: #242424;
+  height: 5%;
+  border-bottom: solid 1px #404040;
+}
+
+#logo {
+  width: 40px;
+}
+
+/* header > div {
+  width: 40px;
+} */
+
+header > h1 {
+  color: #00d8ff;
 }
 
 .sidebar {
   position: fixed;
-  background-color: rgb(94, 31, 152);
-  width: 10%;
+  background-color: #242424;
+  width: 200px;
+  height: 100%;
+  border-right: solid 1px #404040;
+}
+
+.sidebar > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 13px 0px;
+  text-align: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar li:hover {
+  background-color: #404040;
+}
+
+main {
+  height: 90%;
+  margin-left: 200px;
+  right: 0;
+  background: rgb(2, 0, 29);
+  background: linear-gradient(
+    164deg,
+    rgb(41, 0, 111) 0%,
+    rgb(32, 0, 88) 5%,
+    rgb(99, 13, 142) 79%,
+    rgb(93, 7, 98) 100%
+  );
+}
+
+#board-header {
+  padding: 20px;
+  /* border-bottom: solid 1px #404040; */
+  background-color: #0000003d;
+}
+
+#list-section {
+  padding: 15px;
   height: 100%;
 }
 
 footer {
   position: fixed;
+  height: 5%;
   bottom: 0;
-  background-color: blueviolet;
+  background-color: #242424;
+  border-top: solid 1px #404040;
   width: 100%;
   padding: 5px 20px;
   text-align: center;

@@ -5,19 +5,29 @@ function App() {
   return (
     <>
       <header>
-        <img src={logo} />
-        <p>React App</p>
+        <img id="logo" src={logo} alt="image of logo" />
+        <h1>React App</h1>
+        <div></div>
       </header>
-      <div class="sidebar">
+      <div className="sidebar">
         <ul>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">About</a>
-          </li>
+          <a href="#">
+            <li>Home</li>
+          </a>
+          <a href="#">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Something</li>
+          </a>
         </ul>
       </div>
+      <main>
+        <section id="board-header">
+          <h3>Name of the board</h3>
+        </section>
+        <section id="list-section">test</section>
+      </main>
       <footer>
         <p>
           Here is the link to the{" "}
