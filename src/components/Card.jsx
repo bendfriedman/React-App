@@ -9,13 +9,13 @@ export const Card = ({ dataElement }) => {
 
   const [labelColor, setLabelColor] = useState("");
 
-  if (dataElement.priority === "Low") {
-    setLabelColor(priorityColors.lowColor);
-  } else if (dataElement.priority === "Medium") {
-    setLabelColor(priorityColors.mediumColor);
-  } else {
-    setLabelColor(priorityColors.highColor);
-  }
+  // if (dataElement.priority === "Low") {
+  //   setLabelColor(priorityColors.lowColor);
+  // } else if (dataElement.priority === "Medium") {
+  //   setLabelColor(priorityColors.mediumColor);
+  // } else {
+  //   setLabelColor(priorityColors.highColor);
+  // }
 
   return (
     <div id="card">
