@@ -22,7 +22,7 @@ export const Card = ({ dataElement }) => {
       <div id="priority-label" style={{ backgroundColor: { labelColor } }}>
         {dataElement.priority}
       </div>
-      <div id="name">Name: {dataElement.title}</div>
+      <div id="name">Title: {dataElement.title}</div>
     </div>
   );
 };

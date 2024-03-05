@@ -18,10 +18,6 @@ header {
   width: 40px;
 }
 
-/* header > div {
-  width: 40px;
-} */
-
 header > h1 {
   color: #00d8ff;
 }
@@ -54,9 +50,10 @@ header > h1 {
 }
 
 main {
+  position: fixed;
   height: 90%;
+  width: 100%;
   margin-left: 200px;
-  right: 0;
   background: rgb(2, 0, 29);
   background: linear-gradient(
     164deg,
@@ -69,11 +66,11 @@ main {
 
 #board-header {
   padding: 20px;
-
   background-color: #0000003d;
 }
 
 #list-section {
+  display: flex;
   padding: 15px;
   height: 100%;
 }
@@ -95,18 +92,40 @@ footer {
   width: 250px;
   padding: 10px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 
 #list-title {
   padding: 10px;
+  height: 20px;
+}
+
+#title-input {
+  background-color: #101204;
+  color: white;
+  border: none;
+}
+
+#list-items {
+  height: 460px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #323b38 #101204;
+  padding-right: 1px;
 }
 
 #card {
   background-color: #22272b;
+  border: 1px solid #22272b;
   padding: 10px;
   margin: 5px 0;
   border-radius: 10px;
   font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#card:hover {
+  border: 1px solid #00d8ff;
 }
 
 #priority-label {

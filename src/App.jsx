@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./assets/react.svg";
 import data from "./assets/data.json";
+import data2 from "./assets/data2.json";
 import List from "./components/List";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         </section>
         <section id="list-section">
           <List data={data} />
+          <List data={data2} />
         </section>
       </main>
       <footer>
