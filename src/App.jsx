@@ -1,5 +1,7 @@
 import "./App.css";
 import logo from "./assets/react.svg";
+import data from "./assets/data.json";
+import List from "./components/List";
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       </header>
       <div className="sidebar">
         <ul>
+          {" "}
           <a href="#">
-            <li>Home</li>
+            {" "}
+            <li>Home</li>{" "}
           </a>
           <a href="#">
             <li>About</li>
@@ -26,7 +30,9 @@ function App() {
         <section id="board-header">
           <h3>Name of the board</h3>
         </section>
-        <section id="list-section">test</section>
+        <section id="list-section">
+          <List data={data} />
+        </section>
       </main>
       <footer>
         <p>
