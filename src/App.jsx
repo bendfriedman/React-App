@@ -7,16 +7,23 @@ import { Route, Routes, Link } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
+import userImg from "./assets/user.png";
 
 function App() {
   return (
     <>
       <header>
         <img id="logo" src={logo} alt="image of logo" />
-        <h1>React App</h1>
+        <h1>React App - Kanban Board</h1>
         <div></div>
       </header>
       <div className="sidebar">
+        <Link to="/notFound">
+          <div id="sidebar-user-container">
+            <img className="user-img" src={userImg} alt="" />
+            <h5>User</h5>
+          </div>
+        </Link>
         <ul>
           <Link to="/">
             <li>Home</li>
@@ -25,8 +32,9 @@ function App() {
           <Link to="/about">
             <li>About</li>
           </Link>
-
-          <li>Contact</li>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
         </ul>
       </div>
       <main>

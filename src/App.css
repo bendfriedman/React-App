@@ -31,6 +31,19 @@ header > h1 {
   z-index: 1;
 }
 
+#sidebar-user-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #404040;
+  height: 70px;
+}
+
+.user-img {
+  height: 40px;
+  margin: 0 10px;
+}
+
 .sidebar > ul {
   list-style-type: none;
   padding: 0;
@@ -66,6 +79,7 @@ main {
 }
 
 #board-header {
+  height: 30px; /* plus 2 x 20px padding = 70px */
   padding: 20px;
   background-color: #0000003d;
 }
@@ -99,7 +113,8 @@ footer {
 }
 
 #list-title {
-  padding: 10px 5px;
+  padding: 5px 5px 10px;
+  margin-bottom: 5px;
   height: 20px;
   display: flex;
 }
@@ -132,7 +147,7 @@ footer {
   background-color: #22272b;
   border: 2px solid #22272b;
   padding: 10px;
-  margin: 4px 0;
+  margin-bottom: 8px;
   border-radius: 12px;
   font-size: 0.9rem;
   cursor: pointer;
@@ -142,9 +157,31 @@ footer {
   border: 2px solid #00d8ff;
 }
 
+#card-row-one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  background-color: #22272b;
+  color: black;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cross-img {
+  width: 10px;
+}
+
+.delete-btn:active {
+  color: #b2b2b2;
+}
+
 #priority-label {
-  /* background-color: rgb(0, 0, 0); */
-  width: 70px;
+  width: 40px;
+  height: 8px;
   text-align: center;
   border-radius: 5px;
 }
