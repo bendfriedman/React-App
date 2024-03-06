@@ -1,6 +1,16 @@
-import { useState } from "react";
+export const Card = ({ dataElement, allData, setCardData }) => {
+  // const [cardState, setCardState] = useState(cardData)
 
-export const Card = ({ dataElement, deleteAction }) => {
+  const deleteAction = (elementId) => {
+    console.log(elementId, allData);
+    const filteredData = allData.filter((card) => {
+      if (card.id !== elementId) {
+        return true;
+      }
+    });
+    setCardData(filteredData);
+  };
+
   const priorityColors = {
     lowColor: "green",
     mediumColor: "yellow",
@@ -22,7 +32,7 @@ export const Card = ({ dataElement, deleteAction }) => {
       >
         {dataElement.priority}
       </div>
-      <div id="name">Title: {dataElement.title}</div>
+      <div id="name">{dataElement.title}</div>
       <button onClick={() => deleteAction(dataElement.id)}>Delete</button>
     </div>
   );

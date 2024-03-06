@@ -3,10 +3,12 @@ import logo from "./assets/react.svg";
 import data from "./assets/data.json";
 import data2 from "./assets/data2.json";
 import List from "./components/List";
+import { Route, Routes, Link } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { About } from "./pages/About";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
-  
-  };
   return (
     <>
       <header>
@@ -16,27 +18,36 @@ function App() {
       </header>
       <div className="sidebar">
         <ul>
-          {" "}
-          <a href="#">
-            {" "}
-            <li>Home</li>{" "}
-          </a>
-          <a href="#">
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+
+          <Link to="/about">
             <li>About</li>
-          </a>
-          <a href="#">
-            <li>Something</li>
-          </a>
+          </Link>
+
+          <li>Contact</li>
         </ul>
       </div>
       <main>
-        <section id="board-header">
-          <h3>Name of the board</h3>
-        </section>
-        <section id="list-section">
-          <List data={data} deleteAction={deleteDataItem} />
-          <List data={data2} />
-        </section>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="board-header">
+                  <h3>Name of the board</h3>
+                </section>
+                <section id="list-section">
+                  <List data={data} />
+                  <List data={data2} />
+                </section>
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <footer>
         <p>

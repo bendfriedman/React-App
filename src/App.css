@@ -28,6 +28,7 @@ header > h1 {
   width: 200px;
   height: 100%;
   border-right: solid 1px #404040;
+  z-index: 1;
 }
 
 .sidebar > ul {
@@ -84,48 +85,61 @@ footer {
   width: 100%;
   padding: 5px 20px;
   text-align: center;
+  z-index: 2;
 }
 
 #list {
   background-color: #101204;
-  height: 500px;
-  width: 250px;
-  padding: 10px;
+  height: 600px;
+  max-height: 70%;
+  width: 284px;
+  padding: 10px 10px 20px;
   border-radius: 10px;
   margin-right: 10px;
 }
 
 #list-title {
-  padding: 10px;
+  padding: 10px 5px;
   height: 20px;
+  display: flex;
 }
 
-#title-input {
+.title-input {
   background-color: #101204;
-  color: white;
-  border: none;
+  color: #b2b2b2;
+  width: 100%;
+  padding: 13px 5px;
+  border: 1px solid #101204;
+}
+
+.title-input:focus {
+  outline: none;
+  border: 1px solid #00d8ff;
+  border-radius: 5px;
 }
 
 #list-items {
-  height: 460px;
+  height: calc(100% - 40px);
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #323b38 #101204;
   padding-right: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
 #card {
   background-color: #22272b;
-  border: 1px solid #22272b;
+  border: 2px solid #22272b;
   padding: 10px;
-  margin: 5px 0;
-  border-radius: 10px;
+  margin: 4px 0;
+  border-radius: 12px;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 #card:hover {
-  border: 1px solid #00d8ff;
+  border: 2px solid #00d8ff;
 }
 
 #priority-label {
