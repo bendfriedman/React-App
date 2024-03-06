@@ -1,6 +1,6 @@
 import { Card } from "./Card";
 
-export default function List({ data }) {
+export default function List({ data, deleteAction }) {
   return (
     <div id="list">
       <div id="list-title">
@@ -13,7 +13,7 @@ export default function List({ data }) {
       </div>
       <div id="list-items">
         {data.map((dataElement) => {
-          return <Card dataElement={dataElement} key={dataElement.id} />;
+          return <Card dataElement={dataElement} deleteAction={deleteAction} key={dataElement.id} />;
         })}
       </div>
     </div>

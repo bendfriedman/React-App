@@ -1,28 +1,29 @@
 import { useState } from "react";
 
-export const Card = ({ dataElement }) => {
+export const Card = ({ dataElement, deleteAction }) => {
   const priorityColors = {
     lowColor: "green",
     mediumColor: "yellow",
     highColor: "red",
   };
 
-  const [labelColor, setLabelColor] = useState("");
-
-  // if (dataElement.priority === "Low") {
-  //   setLabelColor(priorityColors.lowColor);
-  // } else if (dataElement.priority === "Medium") {
-  //   setLabelColor(priorityColors.mediumColor);
-  // } else {
-  //   setLabelColor(priorityColors.highColor);
-  // }
-
   return (
     <div id="card">
-      <div id="priority-label" style={{ backgroundColor: { labelColor } }}>
+      <div
+        id="priority-label"
+        style={{
+          backgroundColor:
+            dataElement.priority === "Low"
+              ? priorityColors.lowColor
+              : dataElement.priority === "Medium"
+              ? priorityColors.mediumColor
+              : priorityColors.highColor,
+        }}
+      >
         {dataElement.priority}
       </div>
       <div id="name">Title: {dataElement.title}</div>
+      <button onClick={() => deleteAction(dataElement.id)}>Delete</button>
     </div>
   );
 };

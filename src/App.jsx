@@ -5,6 +5,8 @@ import data2 from "./assets/data2.json";
 import List from "./components/List";
 
 function App() {
+  
+  };
   return (
     <>
       <header>
@@ -32,7 +34,7 @@ function App() {
           <h3>Name of the board</h3>
         </section>
         <section id="list-section">
-          <List data={data} />
+          <List data={data} deleteAction={deleteDataItem} />
           <List data={data2} />
         </section>
       </main>
