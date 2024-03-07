@@ -1,20 +1,23 @@
 import "./App.css";
 import logo from "./assets/react.svg";
-import data from "./assets/data.json";
-import data2 from "./assets/data2.json";
-import List from "./components/List";
 import { Route, Routes, Link } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
 import userImg from "./assets/user.png";
+import { ItemDetails } from "./pages/ItemDetails";
+import data from "./assets/data.json";
+import { useState } from "react";
+import { NewCard } from "./components/NewCard";
 
 function App() {
+  const [cardData, setCardData] = useState(data);
+
   return (
     <>
       <header>
         <img id="logo" src={logo} alt="image of logo" />
-        <h1>React App - Kanban Board</h1>
+        <h1>React App</h1>
         <div></div>
       </header>
       <div className="sidebar">
@@ -32,8 +35,8 @@ function App() {
           <Link to="/about">
             <li>About</li>
           </Link>
-          <Link to="/contact">
-            <li>Contact</li>
+          <Link to="/create-card">
+            <li>+ New List Item +</li>
           </Link>
         </ul>
       </div>
@@ -41,20 +44,15 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={
-              <>
-                <section id="board-header">
-                  <h3>Name of the board</h3>
-                </section>
-                <section id="list-section">
-                  <List data={data} />
-                  <List data={data2} />
-                </section>
-              </>
-            }
+            element={<HomePage cardData={cardData} setCardData={setCardData} />}
           />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
+          <Route
+            path="/card/:cardId"
+            element={<ItemDetails cardData={cardData} />}
+          />
+          <Route path="/create-card" element={<NewCard />} />
         </Routes>
       </main>
       <footer>

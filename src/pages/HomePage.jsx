@@ -1,12 +1,16 @@
-export const HomePage = () => {
+import List from "../components/List";
+import { NewCard } from "../components/NewCard";
+
+export const HomePage = ({ cardData, setCardData }) => {
   return (
     <>
       <section id="board-header">
-        <h3>Name of the board</h3>
+        <h3>Your Kanban Board</h3>
       </section>
       <section id="list-section">
-        <List data={data} />
-        <List data={data2} />
+        <List cardData={cardData} setCardData={setCardData} />
+
+        <NewCard cardData={cardData} setCardData={setCardData} />
       </section>
     </>
   );

@@ -1,7 +1,6 @@
-export const Card = ({ dataElement, allData, setCardData }) => {
+export const Card = ({ dataElement, cardData, setCardData }) => {
   const deleteAction = (elementId) => {
-    console.log(elementId, allData);
-    const filteredData = allData.filter((card) => {
+    const filteredData = cardData.filter((card) => {
       if (card.id !== elementId) {
         return true;
       }
@@ -31,7 +30,10 @@ export const Card = ({ dataElement, allData, setCardData }) => {
         ></div>
         <button
           className="delete-btn"
-          onClick={() => deleteAction(dataElement.id)}
+          onClick={(event) => {
+            event.preventDefault();
+            deleteAction(dataElement.id);
+          }}
         >
           X
         </button>

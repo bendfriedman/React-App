@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Card } from "./Card";
+import { Link } from "react-router-dom";
 
-export default function List({ data }) {
-  const [cardData, setCardData] = useState(data);
-
+export default function List({ cardData, setCardData }) {
   return (
     <div id="list">
       <div id="list-title">
@@ -17,12 +15,13 @@ export default function List({ data }) {
       <div id="list-items">
         {cardData.map((dataElement) => {
           return (
-            <Card
-              dataElement={dataElement}
-              allData={cardData}
-              setCardData={setCardData}
-              key={dataElement.id}
-            />
+            <Link to={`/card/${dataElement.id}`} key={dataElement.id}>
+              <Card
+                dataElement={dataElement}
+                cardData={cardData}
+                setCardData={setCardData}
+              />
+            </Link>
           );
         })}
       </div>
