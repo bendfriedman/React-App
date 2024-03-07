@@ -52,7 +52,10 @@ function App() {
             path="/card/:cardId"
             element={<ItemDetails cardData={cardData} />}
           />
-          <Route path="/create-card" element={<NewCard />} />
+          <Route
+            path="/create-card"
+            element={<NewCard cardData={cardData} setCardData={setCardData} />}
+          />
         </Routes>
       </main>
       <footer>
