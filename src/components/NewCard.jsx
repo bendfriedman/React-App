@@ -38,7 +38,7 @@ export const NewCard = ({ cardData, setCardData }) => {
     nav("/");
   };
   return (
-    <div>
+    <>
       <div id="popup">
         <div id="inside-popup">
           <form onSubmit={handleCreateCard}>
@@ -106,7 +106,7 @@ export const NewCard = ({ cardData, setCardData }) => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
