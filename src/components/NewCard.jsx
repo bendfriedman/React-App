@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 export const NewCard = ({ cardData, setCardData }) => {
   return (
-    <div>
+    <>
       <div id="popup">
         <div id="inside-popup">
+          <Link to="/">X</Link>
           <form>
             <label>
               Title
@@ -41,7 +44,7 @@ export const NewCard = ({ cardData, setCardData }) => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

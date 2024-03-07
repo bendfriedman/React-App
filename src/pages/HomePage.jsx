@@ -10,7 +10,7 @@ export const HomePage = ({ cardData, setCardData }) => {
       <section id="list-section">
         <List cardData={cardData} setCardData={setCardData} />
 
-        <NewCard cardData={cardData} setCardData={setCardData} />
+        {/* <NewCard cardData={cardData} setCardData={setCardData} /> */}
       </section>
     </>
   );

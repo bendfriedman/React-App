@@ -20,6 +20,7 @@ function App() {
         <h1>React App</h1>
         <div></div>
       </header>
+
       <div className="sidebar">
         <Link to="/notFound">
           <div id="sidebar-user-container">
@@ -52,9 +53,15 @@ function App() {
             path="/card/:cardId"
             element={<ItemDetails cardData={cardData} />}
           />
-          <Route path="/create-card" element={<NewCard />} />
         </Routes>
       </main>
+      {/* Popup has to be here to be ontop of everything. */}
+      <Routes>
+        <Route
+          path="/create-card"
+          element={<NewCard cardData={cardData} setCardData={setCardData} />}
+        />
+      </Routes>
       <footer>
         <p>
           Here is the link to the{" "}
