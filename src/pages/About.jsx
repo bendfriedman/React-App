@@ -2,9 +2,9 @@ export const About = () => {
   return (
     <div>
       <div>
-        <div>
-          <h3>Project Description</h3>
-        </div>
+        <section className="board-header">
+          <h3>About Us</h3>
+        </section>
         <div>
           <p>Description goes here ....</p>
         </div>

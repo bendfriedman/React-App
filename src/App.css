@@ -78,7 +78,7 @@ main {
   );
 }
 
-#board-header {
+.board-header {
   height: 30px; /* plus 2 x 20px padding = 70px */
   padding: 20px;
   background-color: #0000003d;
@@ -208,6 +208,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }

@@ -9,6 +9,7 @@ import { ItemDetails } from "./pages/ItemDetails";
 import data from "./assets/data.json";
 import { useState } from "react";
 import { NewCard } from "./components/NewCard";
+import { UpdateCard } from "./components/UpdateCard";
 
 function App() {
   const [cardData, setCardData] = useState(data);
@@ -37,7 +38,7 @@ function App() {
             <li>About</li>
           </Link>
           <Link to="/create-card">
-            <li>+ New List Item +</li>
+            <li>+ Create New Card +</li>
           </Link>
         </ul>
       </div>
@@ -64,6 +65,10 @@ function App() {
         <Route
           path="/create-card"
           element={<NewCard cardData={cardData} setCardData={setCardData} />}
+        />
+        <Route
+          path="/card/edit/"
+          element={<UpdateCard cardData={cardData} setCardData={setCardData} />}
         />
       </Routes>
       <footer>

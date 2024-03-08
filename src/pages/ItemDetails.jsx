@@ -1,8 +1,10 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export const ItemDetails = ({ cardData }) => {
   const { cardId } = useParams();
   const shownCard = cardData.find((card) => card.id == cardId);
+  const nav = useNavigate();
 
   return (
     <div>
@@ -16,6 +18,11 @@ export const ItemDetails = ({ cardData }) => {
       <div>priority: {shownCard.priority} </div>
       <div>createdDate: {shownCard.createdDate} </div>
       <div>dueDate: {shownCard.dueDate} </div>
+      <div>
+        {/* <Link to="/card/2"> */}
+        <button onClick={() => nav("/card/edit")}>Edit the Card Info</button>
+        {/* </Link> */}
+      </div>
     </div>
   );
 };

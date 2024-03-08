@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 export const NewCard = ({ cardData, setCardData }) => {
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
@@ -12,10 +11,8 @@ export const NewCard = ({ cardData, setCardData }) => {
   const [dueDate, setDueDate] = useState("");
   const nav = useNavigate();
 
-
-
   const handleCreateCard = (event) => {
-    const today = new Date ()
+    const today = new Date();
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
     const date = today.getDate();
@@ -37,9 +34,16 @@ export const NewCard = ({ cardData, setCardData }) => {
     console.log(cardData);
     nav("/");
   };
+
+  const handleClickOutside = (e) => {
+    console.log(e);
+    if (e.currentTarget != e.target) return;
+    nav("/");
+  };
+
   return (
     <>
-      <div id="popup">
+      <div id="popup" onClick={handleClickOutside}>
         <div id="inside-popup">
           <form onSubmit={handleCreateCard}>
             <label>
@@ -109,12 +113,3 @@ export const NewCard = ({ cardData, setCardData }) => {
     </>
   );
 };
-
-//   <div>title:  </div>
-//   <div>description:  </div>
-//   <div>assignee:  </div>
-//   <div>status:  </div>
-//   <div>priority: </div>
-//   <div>createdDate:  </div>
-//   <div>dueDate: </div>
-// </div>;
