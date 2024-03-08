@@ -19,9 +19,9 @@ export const ItemDetails = ({ cardData }) => {
       <div>createdDate: {shownCard.createdDate} </div>
       <div>dueDate: {shownCard.dueDate} </div>
       <div>
-        {/* <Link to="/card/2"> */}
-        <button onClick={() => nav("/card/edit")}>Edit the Card Info</button>
-        {/* </Link> */}
+        <Link to={`/card-edit/${shownCard.id}`}>
+          <button>Edit the Card Info</button>
+        </Link>
       </div>
     </div>
   );

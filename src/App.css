@@ -64,6 +64,7 @@ header > h1 {
 }
 
 main {
+  z-index: 1;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -99,7 +100,7 @@ footer {
   width: 100%;
   padding: 5px 20px;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 #list {
@@ -186,7 +187,7 @@ footer {
   border-radius: 5px;
 }
 
-#popup {
+.popup {
   /* display: none; */
   position: fixed;
   z-index: 98;
@@ -198,7 +199,7 @@ footer {
   /* background-color: #101204; */
 }
 
-#inside-popup {
+.inside-popup {
   display: block;
   overflow: hidden;
   width: 30%;
@@ -210,4 +211,19 @@ footer {
   margin-top: 10%;
   padding: 30px;
   border-radius: 10px;
+}
+
+.create-btn {
+  background-color: #101204;
+}
+
+.cover {
+  background-color: #00d8ff;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 97;
 }

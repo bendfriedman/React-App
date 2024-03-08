@@ -37,11 +37,25 @@ function App() {
           <Link to="/about">
             <li>About</li>
           </Link>
-          <Link to="/create-card">
-            <li>+ Create New Card +</li>
-          </Link>
         </ul>
+
+        <Link to="/create-card">
+          <button id="create-btn">+ Create New Card +</button>
+        </Link>
       </div>
+      {/* Popup has to be here to be ontop of everything. */}
+
+      <Routes>
+        <Route
+          path="/card-edit/:cardId"
+          element={<UpdateCard cardData={cardData} setCardData={setCardData} />}
+        />
+        <Route
+          path="/create-card"
+          element={<NewCard cardData={cardData} setCardData={setCardData} />}
+        />
+      </Routes>
+
       <main>
         <Routes>
           <Route
@@ -54,23 +68,18 @@ function App() {
             path="/card/:cardId"
             element={<ItemDetails cardData={cardData} />}
           />
+
           <Route
             path="/create-card"
-            element={<NewCard cardData={cardData} setCardData={setCardData} />}
+            element={<HomePage cardData={cardData} setCardData={setCardData} />}
+          />
+          <Route
+            path="/card-edit/:cardId"
+            element={<ItemDetails cardData={cardData} />}
           />
         </Routes>
       </main>
-      {/* Popup has to be here to be ontop of everything. */}
-      <Routes>
-        <Route
-          path="/create-card"
-          element={<NewCard cardData={cardData} setCardData={setCardData} />}
-        />
-        <Route
-          path="/card/edit/"
-          element={<UpdateCard cardData={cardData} setCardData={setCardData} />}
-        />
-      </Routes>
+
       <footer>
         <p>
           Here is the link to the{" "}

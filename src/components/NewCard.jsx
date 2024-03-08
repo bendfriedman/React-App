@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 export const NewCard = ({ cardData, setCardData }) => {
@@ -29,23 +29,24 @@ export const NewCard = ({ cardData, setCardData }) => {
       dueDate,
       id: cardData.length + 1,
     };
-    console.log(newCard);
+
     setCardData([...cardData, newCard]);
-    console.log(cardData);
+
     nav("/");
   };
 
   const handleClickOutside = (e) => {
-    console.log(e);
     if (e.currentTarget != e.target) return;
+
     nav("/");
   };
 
   return (
     <>
-      <div id="popup" onClick={handleClickOutside}>
-        <div id="inside-popup">
+      <div className="popup" onClick={handleClickOutside}>
+        <div className="inside-popup">
           <form onSubmit={handleCreateCard}>
+            <h1>CREATE NEW CARD</h1>
             <label>
               Title
               <input

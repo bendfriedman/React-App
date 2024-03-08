@@ -9,9 +9,22 @@ export const About = () => {
           <p>Description goes here ....</p>
         </div>
       </div>
-      <div> Team Members: Mariana God & Ben Fried</div>
       <div>
-        Mariana God Github:https://github.com/marianaGOD
+        <h4>Team Members</h4>
+        <div className="team-member-container">
+          <h5>Mariana God</h5>
+          <ul>
+            <li>Github: https://github.com/marianaGOD</li>
+            <li>
+              LinkedIn: https://www.linkedin.com/in/mariana-batalha-dos-loios/
+            </li>
+          </ul>
+        </div>
+
+        <div>Ben Fried</div>
+      </div>
+      <div>
+        Github:https://github.com/marianaGOD
         LinkedIn:https://www.linkedin.com/in/mariana-batalha-dos-loios/
       </div>
       <div>Ben Friedman Github: LinkedIn:</div>
