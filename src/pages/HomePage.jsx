@@ -1,15 +1,21 @@
+import { BoardHeader } from "../components/BoardHeader";
 import List from "../components/List";
-import { NewCard } from "../components/NewCard";
 
 export const HomePage = ({ cardData, setCardData }) => {
   return (
     <>
-      <section className="board-header">
-        <h3>Your Kanban Board</h3>
-      </section>
-      <section id="list-section">
-        <List cardData={cardData} setCardData={setCardData} />
-      </section>
+      <BoardHeader boardTitle={"Your Kanban Board"} />
+      <div className="content-box">
+        <section id="list-section">
+          <List cardData={cardData} setCardData={setCardData} status="To Do" />
+          <List
+            cardData={cardData}
+            setCardData={setCardData}
+            status="In Progress"
+          />
+          <List cardData={cardData} setCardData={setCardData} status="Done" />
+        </section>
+      </div>
     </>
   );
 };

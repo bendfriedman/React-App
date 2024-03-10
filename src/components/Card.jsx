@@ -8,17 +8,17 @@ export const Card = ({ dataElement, cardData, setCardData }) => {
     setCardData(filteredData);
   };
 
-  const priorityColors = {
-    lowColor: "#206e4e",
-    mediumColor: "#805f02",
-    highColor: "#ae2e23",
-  };
+  // const priorityColors = {
+  //   lowColor: "#206e4e",
+  //   mediumColor: "#805f02",
+  //   highColor: "#ae2e23",
+  // };
 
   return (
     <div id="card">
       <div id="card-row-one">
-        <div
-          id="priority-label"
+        {/* <div
+          className="priority-label"
           style={{
             backgroundColor:
               dataElement.priority === "Low"
@@ -27,9 +27,12 @@ export const Card = ({ dataElement, cardData, setCardData }) => {
                 ? priorityColors.mediumColor
                 : priorityColors.highColor,
           }}
+        ></div> */}
+        <div
+          className={`priority-label ${dataElement.priority.toLowerCase()}`}
         ></div>
         <button
-          className="delete-btn"
+          className="delete-btn b"
           onClick={(event) => {
             event.preventDefault();
             deleteAction(dataElement.id);

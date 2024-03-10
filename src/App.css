@@ -28,7 +28,7 @@ header > h1 {
   width: 200px;
   height: 100%;
   border-right: solid 1px #404040;
-  z-index: 1;
+  z-index: 2;
 }
 
 #sidebar-user-container {
@@ -63,6 +63,10 @@ header > h1 {
   background-color: #404040;
 }
 
+/* .sidebar a:hover {
+  color: #00d8ff;
+} */
+
 main {
   z-index: 1;
   position: fixed;
@@ -87,7 +91,6 @@ main {
 
 #list-section {
   display: flex;
-  padding: 15px;
   height: 100%;
 }
 
@@ -100,7 +103,7 @@ footer {
   width: 100%;
   padding: 5px 20px;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 #list {
@@ -144,6 +147,10 @@ footer {
   flex-direction: column;
 }
 
+#list-items a:hover {
+  color: #b2b2b2;
+}
+
 #card {
   background-color: #22272b;
   border: 2px solid #22272b;
@@ -168,7 +175,6 @@ footer {
   color: black;
   border: none;
   font-size: 0.9rem;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -180,11 +186,24 @@ footer {
   color: #404040;
 }
 
-#priority-label {
+.priority-label {
   width: 40px;
   height: 8px;
   text-align: center;
   border-radius: 5px;
+  margin-right: 5px;
+}
+
+.priority-label.low {
+  background-color: #206e4e;
+}
+
+.priority-label.medium {
+  background-color: #805f02;
+}
+
+.priority-label.high {
+  background-color: #ae2e23;
 }
 
 .popup {
@@ -226,4 +245,97 @@ footer {
   bottom: 0;
   right: 0;
   z-index: 97;
+}
+
+.content-box {
+  padding: 20px;
+}
+
+.about-us {
+  width: 500px;
+}
+
+.project-description {
+  margin-bottom: 20px;
+}
+
+.about-hr {
+  border: 1px solid #404040;
+}
+
+#team-section {
+  margin-top: 20px;
+}
+
+.team-member-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
+  background-color: #22272b;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid #22272b;
+}
+
+.team-member-container:hover {
+  border: 2px solid #00d8ff;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.team-member-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-labels {
+  display: flex;
+}
+
+.team-member-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.team-socials {
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.team-socials a {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.img-social {
+  width: 30px;
+  padding: 5px 0;
+  margin-right: 10px;
+}
+
+.card-details table {
+  margin-bottom: 25px;
+}
+
+.card-details td {
+  padding: 10px 25px 0 0;
+}
+
+.details-priority {
+  display: flex;
+  align-items: center;
+}
+
+.details-priority div {
+  margin-right: 15px;
 }

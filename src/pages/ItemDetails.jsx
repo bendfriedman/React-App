@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router";
+import { BoardHeader } from "../components/BoardHeader";
 
 export const ItemDetails = ({ cardData }) => {
   const { cardId } = useParams();
@@ -7,22 +8,55 @@ export const ItemDetails = ({ cardData }) => {
   const nav = useNavigate();
 
   return (
-    <div>
-      <div>Card Details</div>
-      <br />
-      {/* <div>id: {shownCard.id} </div> */}
-      <div>title: {shownCard.title} </div>
-      <div>description: {shownCard.description} </div>
-      <div>assignee: {shownCard.assignee} </div>
-      <div>status: {shownCard.status} </div>
-      <div>priority: {shownCard.priority} </div>
-      <div>createdDate: {shownCard.createdDate} </div>
-      <div>dueDate: {shownCard.dueDate} </div>
-      <div>
-        <Link to={`/card-edit/${shownCard.id}`}>
-          <button>Edit the Card Info</button>
-        </Link>
+    <>
+      <BoardHeader boardTitle={`Card Details - "${shownCard.title}"`} />
+      <div className="content-box card-details">
+        <table>
+          {/* <tr>
+            <td>Card-ID:</td>
+            <td>{shownCard.id}</td>
+          </tr> */}
+          <tr>
+            <td className="b">Title:</td>
+            <td>{shownCard.title}</td>
+          </tr>
+          <tr>
+            <td className="b">Description:</td>
+            <td>{shownCard.description}</td>
+          </tr>
+          <tr>
+            <td className="b">Assignee:</td>
+            <td>{shownCard.assignee}</td>
+          </tr>
+          <tr>
+            <td className="b">Status:</td>
+            <td>{shownCard.status}</td>
+          </tr>
+          <tr>
+            <td className="b">Priority:</td>
+            <td className="details-priority">
+              <div>{shownCard.priority}</div>
+              <div
+                className={`priority-label ${shownCard.priority.toLowerCase()}`}
+              ></div>
+            </td>
+          </tr>
+          <tr>
+            <td className="b">CreatedDate:</td>
+            <td>{shownCard.createdDate}</td>
+          </tr>
+          <tr>
+            <td className="b">DueDate:</td>
+            <td>{shownCard.dueDate}</td>
+          </tr>
+        </table>
+
+        <div>
+          <Link to={`/card-edit/${shownCard.id}`}>
+            <button>Edit the Card Info</button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
