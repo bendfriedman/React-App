@@ -12,43 +12,45 @@ export const ItemDetails = ({ cardData }) => {
       <BoardHeader boardTitle={`Card Details - "${shownCard.title}"`} />
       <div className="content-box card-details">
         <table>
-          {/* <tr>
+          <tbody>
+            {/* <tr>
             <td>Card-ID:</td>
             <td>{shownCard.id}</td>
           </tr> */}
-          <tr>
-            <td className="b">Title:</td>
-            <td>{shownCard.title}</td>
-          </tr>
-          <tr>
-            <td className="b">Description:</td>
-            <td>{shownCard.description}</td>
-          </tr>
-          <tr>
-            <td className="b">Assignee:</td>
-            <td>{shownCard.assignee}</td>
-          </tr>
-          <tr>
-            <td className="b">Status:</td>
-            <td>{shownCard.status}</td>
-          </tr>
-          <tr>
-            <td className="b">Priority:</td>
-            <td className="details-priority">
-              <div>{shownCard.priority}</div>
-              <div
-                className={`priority-label ${shownCard.priority.toLowerCase()}`}
-              ></div>
-            </td>
-          </tr>
-          <tr>
-            <td className="b">CreatedDate:</td>
-            <td>{shownCard.createdDate}</td>
-          </tr>
-          <tr>
-            <td className="b">DueDate:</td>
-            <td>{shownCard.dueDate}</td>
-          </tr>
+            <tr>
+              <td className="b">Title:</td>
+              <td>{shownCard.title}</td>
+            </tr>
+            <tr>
+              <td className="b">Description:</td>
+              <td>{shownCard.description}</td>
+            </tr>
+            <tr>
+              <td className="b">Assignee:</td>
+              <td>{shownCard.assignee}</td>
+            </tr>
+            <tr>
+              <td className="b">Status:</td>
+              <td>{shownCard.status}</td>
+            </tr>
+            <tr>
+              <td className="b">Priority:</td>
+              <td className="details-priority">
+                <div>{shownCard.priority}</div>
+                <div
+                  className={`priority-label ${shownCard.priority.toLowerCase()}`}
+                ></div>
+              </td>
+            </tr>
+            <tr>
+              <td className="b">CreatedDate:</td>
+              <td>{shownCard.createdDate}</td>
+            </tr>
+            <tr>
+              <td className="b">DueDate:</td>
+              <td>{shownCard.dueDate}</td>
+            </tr>
+          </tbody>
         </table>
 
         <div>
