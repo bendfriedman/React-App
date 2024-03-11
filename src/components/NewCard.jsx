@@ -5,7 +5,7 @@ export const NewCard = ({ cardData, setCardData }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
-  const [cardStatus, setCardStatus] = useState("To Do");
+  const [status, setStatus] = useState("To Do");
   const [priority, setPriority] = useState("Low");
   const [createdDate] = useState(new Date().toLocaleDateString());
   const [dueDate, setDueDate] = useState("");
@@ -23,7 +23,7 @@ export const NewCard = ({ cardData, setCardData }) => {
       title,
       description,
       assignee,
-      cardStatus,
+      status,
       priority,
       createdDate: currentDate,
       dueDate,
@@ -79,7 +79,7 @@ export const NewCard = ({ cardData, setCardData }) => {
                 Assignee
                 <br />
                 <input
-                  placeholder="Assignee"
+                  placeholder="assignee"
                   type="text"
                   value={assignee}
                   onChange={(event) => setAssignee(event.target.value)}
@@ -91,9 +91,9 @@ export const NewCard = ({ cardData, setCardData }) => {
                 Status
                 <br />
                 <select
-                  name="Status"
-                  value={cardStatus}
-                  onChange={(event) => setCardStatus(event.target.value)}
+                  name="status"
+                  value={status}
+                  onChange={(event) => setStatus(event.target.value)}
                 >
                   <option value="To Do">To Do</option>
                   <option value="In Progress">In Progress</option>

@@ -5,8 +5,8 @@ export const UpdateCard = ({ cardData, setCardData }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
-  const [cardStatus, setCardStatus] = useState("To Do");
-  const [priority, setPriority] = useState("Low");
+  const [status, setStatus] = useState("");
+  const [priority, setPriority] = useState("");
   const [createdDate, setCreatedDate] = useState(
     new Date().toLocaleDateString()
   );
@@ -24,26 +24,27 @@ export const UpdateCard = ({ cardData, setCardData }) => {
     setTitle(shownCard.title);
     setDescription(shownCard.description);
     setAssignee(shownCard.assignee);
-    setCardStatus(shownCard.cardStatus);
+    setStatus(shownCard.status);
+    setPriority(shownCard.priority);
     setCreatedDate(shownCard.createdDate);
     setDueDate(shownCard.dueDate);
   }, []);
 
   const handleUpdateCard = (event) => {
-    const today = new Date();
-    const month = today.getMonth() + 1;
-    const year = today.getFullYear();
-    const date = today.getDate();
-    const currentDate = year + "/" + month + "/" + date;
+    // const today = new Date();
+    // const month = today.getMonth() + 1;
+    // const year = today.getFullYear();
+    // const date = today.getDate();
+    // const currentDate = year + "/" + month + "/" + date;
     event.preventDefault();
 
     const newCard = {
       title,
       description,
       assignee,
-      cardStatus,
+      status,
       priority,
-      createdDate,
+      createdDate: cardData.createdDate,
       dueDate,
       id: cardId,
     };
@@ -63,7 +64,7 @@ export const UpdateCard = ({ cardData, setCardData }) => {
       <div className="popup" onClick={handleClickOutside}>
         <div className="inside-popup">
           <form onSubmit={handleUpdateCard}>
-            <h1>UPDATE CARD</h1>
+            <h1>EDIT CARD</h1>
             <label>
               Title
               <input
@@ -93,9 +94,9 @@ export const UpdateCard = ({ cardData, setCardData }) => {
             <label>
               Status
               <select
-                name="Status"
-                value={cardStatus}
-                onChange={(event) => setCardStatus(event.target.value)}
+                name="status"
+                value={status}
+                onChange={(event) => setStatus(event.target.value)}
               >
                 <option value="To Do">To Do</option>
                 <option value="In Progress">In Progress</option>
@@ -117,12 +118,13 @@ export const UpdateCard = ({ cardData, setCardData }) => {
             <label>
               Due Date
               <input
-                name="CreatedDate"
+                name="DueDate"
                 type="date"
-                placeholder="Created Date"
+                value={dueDate}
+                onChange={(event) => setDueDate(event.target.value)}
               />
             </label>
-            <button type="submit">Create</button>
+            <button type="submit">Finish Edit</button>
             <button onClick={() => nav("/")}>X</button>
           </form>
         </div>
