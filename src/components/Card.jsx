@@ -8,26 +8,9 @@ export const Card = ({ dataElement, cardData, setCardData }) => {
     setCardData(filteredData);
   };
 
-  // const priorityColors = {
-  //   lowColor: "#206e4e",
-  //   mediumColor: "#805f02",
-  //   highColor: "#ae2e23",
-  // };
-
   return (
     <div id="card">
       <div id="card-row-one">
-        {/* <div
-          className="priority-label"
-          style={{
-            backgroundColor:
-              dataElement.priority === "Low"
-                ? priorityColors.lowColor
-                : dataElement.priority === "Medium"
-                ? priorityColors.mediumColor
-                : priorityColors.highColor,
-          }}
-        ></div> */}
         <div
           className={`priority-label ${dataElement.priority.toLowerCase()}`}
         ></div>

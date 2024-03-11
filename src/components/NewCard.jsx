@@ -45,92 +45,99 @@ export const NewCard = ({ cardData, setCardData }) => {
     <>
       <div className="popup" onClick={handleClickOutside}>
         <div className="inside-popup">
-          <form onSubmit={handleCreateCard}>
-            <h1>CREATE NEW CARD</h1>
-            <br />
-            <div className="inline-container1">
-              <label>
-                Title
-                <br />
-                <input
-                  placeholder="Title"
-                  type="text"
-                  value={title}
-                  onChange={(event) => setTitle(event.target.value)}
-                />
-              </label>
-              <br />
-              <label>
-                Description
-                <br />
-                <textarea
-                  id="description-textarea"
-                  placeholder="Description"
-                  value={description}
-                  onChange={(event) => setDescription(event.target.value)}
-                  rows="4"
-                  cols="30"
-                ></textarea>
-              </label>
-            </div>
-            <div className="inline-container2">
-              <label>
-                <br />
-                Assignee
-                <br />
-                <input
-                  placeholder="assignee"
-                  type="text"
-                  value={assignee}
-                  onChange={(event) => setAssignee(event.target.value)}
-                />
-              </label>
-
-              <label>
-                <br />
-                Status
-                <br />
-                <select
-                  name="status"
-                  value={status}
-                  onChange={(event) => setStatus(event.target.value)}
-                >
-                  <option value="To Do">To Do</option>
-                  <option value="In Progress">In Progress</option>
-                  <option value="Done">Done</option>
-                </select>
-              </label>
-              <label>
-                <br />
-                Priority
-                <br />
-                <select
-                  name="Priority"
-                  value={priority}
-                  onChange={(event) => setPriority(event.target.value)}
-                >
-                  <option value="Low">Low</option>
-                  <option value="Medium">Medium</option>
-                  <option value="High">High</option>
-                </select>
-              </label>
-              <label>
-                <br />
-                Due Date
-                <br />
-                <input
-                  name="CreatedDate"
-                  type="date"
-                  placeholder="Created Date"
-                />
-              </label>
-            </div>
-            <button id="popup-submit-btn" type="submit">
-              Create
-            </button>
-            <button id="popup-close-btn" onClick={() => nav("/")}>
+          <div className="popup-header">
+            <h2>CREATE NEW CARD</h2>
+            <button className="delete-btn b" onClick={() => nav("/")}>
               X
             </button>
+          </div>
+          <form onSubmit={handleCreateCard}>
+            <div className="popup-form-container">
+              <div className="inline-container"></div>
+              <div className="inline-container">
+                <label className="popup-title-input">
+                  Title
+                  <br />
+                  <input
+                    placeholder="Title"
+                    type="text"
+                    value={title}
+                    onChange={(event) => setTitle(event.target.value)}
+                  />
+                </label>
+                <br />
+                <label>
+                  Description (max. 100 characters)
+                  <br />
+                  <textarea
+                    id="description-textarea"
+                    placeholder="Description ..."
+                    value={description}
+                    onChange={(event) => setDescription(event.target.value)}
+                    rows="4"
+                    cols="40"
+                    maxlength="100"
+                  ></textarea>
+                </label>
+              </div>
+              <div className="inline-container">
+                <label>
+                  <br />
+                  Assignee
+                  <br />
+                  <input
+                    placeholder="assignee"
+                    type="text"
+                    value={assignee}
+                    onChange={(event) => setAssignee(event.target.value)}
+                  />
+                </label>
+
+                <label>
+                  <br />
+                  Status
+                  <br />
+                  <select
+                    name="status"
+                    value={status}
+                    onChange={(event) => setStatus(event.target.value)}
+                  >
+                    <option value="To Do">To Do</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                  </select>
+                </label>
+                <label>
+                  <br />
+                  Priority
+                  <br />
+                  <select
+                    name="Priority"
+                    value={priority}
+                    onChange={(event) => setPriority(event.target.value)}
+                  >
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                </label>
+                <label>
+                  <br />
+                  Due Date
+                  <br />
+                  <input
+                    name="CreatedDate"
+                    type="date"
+                    placeholder="Created Date"
+                  />
+                </label>
+              </div>
+              <div className="popup-submit-btn-container">
+                <button id="popup-submit-btn" type="submit">
+                  Create
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

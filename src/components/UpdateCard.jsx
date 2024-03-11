@@ -57,7 +57,7 @@ export const UpdateCard = ({ cardData, setCardData }) => {
 
     setCardData(duplicateCardData);
 
-    nav("/");
+    nav(`/card/${cardId}`);
   };
 
   const handleClickOutside = (e) => {

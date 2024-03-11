@@ -14,6 +14,7 @@ export const HomePage = ({ cardData, setCardData }) => {
             status="In Progress"
           />
           <List cardData={cardData} setCardData={setCardData} status="Done" />
+          {/* <SortedList cardData={cardData} setCardData={setCardData} /> */}
         </section>
       </div>
     </>
