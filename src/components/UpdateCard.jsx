@@ -38,18 +38,24 @@ export const UpdateCard = ({ cardData, setCardData }) => {
     // const currentDate = year + "/" + month + "/" + date;
     event.preventDefault();
 
-    const newCard = {
-      title,
-      description,
-      assignee,
-      status,
-      priority,
-      createdDate: cardData.createdDate,
-      dueDate,
-      id: cardId,
-    };
+    const duplicateCardData = cardData.map((card) => {
+      if (card.id === cardId) {
+        const updatedCard = {
+          id: card.id,
+          title: title,
+          description: description,
+          assignee: assignee,
+          status: status,
+          priority: priority,
+          createdDate: card.createdDate,
+          dueDate: dueDate,
+        };
+        return updatedCard;
+      }
+      return card;
+    });
 
-    setCardData([...cardData, newCard]);
+    setCardData(duplicateCardData);
 
     nav("/");
   };
