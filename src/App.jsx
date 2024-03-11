@@ -41,10 +41,11 @@ function App() {
             <li>About</li>
           </Link>
         </ul>
-
-        <Link to="/create-card">
-          <button id="create-btn">+ Create New Card +</button>
-        </Link>
+        <div id="create-btn-div">
+          <Link to="/create-card">
+            <button id="create-btn">Create Card</button>
+          </Link>
+        </div>
       </div>
       {/* Popup has to be here to be ontop of everything. */}
 

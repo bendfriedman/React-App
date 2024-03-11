@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
 #root {
   margin: 0 auto;
   width: 100%;
@@ -232,10 +234,106 @@ footer {
   border-radius: 10px;
 }
 
-.create-btn {
-  background-color: #101204;
+#create-btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: #fff;
+  background: linear-gradient(90deg, #4b00cc 0%, #c500cc 100%);
+  padding: 10px 25px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 11px;
+  transition: 3000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
+#create-btn:hover {
+  border: 2px solid #00d8ff;
+
+}
+
+#create-btn-div {
+  margin-top: 30px;
+  margin-left: 12px;
+  align-items: center;
+}
+
+#edit-card-btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: #fff;
+  background: linear-gradient(90deg, #4b00cc 0%, #c500cc 100%);
+  padding: 10px 25px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 11px;
+  transition: 3000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#edit-card-btn:hover {
+  border: 2px solid #00d8ff;
+}
+
+.inside-popup {
+  position: relative;
+  text-align:left
+}
+.inline-container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  input {font-style:italic}
+}
+
+
+.inline-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  input {font-style:italic}
+}
+#popup-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+#popup-submit-btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: #fff;
+  background: linear-gradient(90deg, #4b00cc 0%, #c500cc 100%);
+  padding: 10px 25px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 11px;
+  transition: 3000ms;
+  transform: translateY(0);
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: absolute;
+  top: 80%;
+  left: 42%;
+}
 .cover {
   background-color: #00d8ff;
   opacity: 0.7;

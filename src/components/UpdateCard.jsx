@@ -77,7 +77,6 @@ export const UpdateCard = ({ cardData, setCardData }) => {
               description
               <input
                 placeholder="Description"
-                type="text"
                 value={description}
                 onChange={(event) => setDescription(event.target.value)}
               />

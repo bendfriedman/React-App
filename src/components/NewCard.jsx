@@ -47,67 +47,90 @@ export const NewCard = ({ cardData, setCardData }) => {
         <div className="inside-popup">
           <form onSubmit={handleCreateCard}>
             <h1>CREATE NEW CARD</h1>
-            <label>
-              Title
-              <input
-                placeholder="Title"
-                type="text"
-                value={title}
-                onChange={(event) => setTitle(event.target.value)}
-              />
-            </label>
-            <label>
-              description
-              <input
-                placeholder="Description"
-                type="text"
-                value={description}
-                onChange={(event) => setDescription(event.target.value)}
-              />
-            </label>
-            <label>
-              Assignee
-              <input
-                placeholder="Assignee"
-                type="text"
-                value={assignee}
-                onChange={(event) => setAssignee(event.target.value)}
-              />
-            </label>
-            <label>
-              Status
-              <select
-                name="Status"
-                value={cardStatus}
-                onChange={(event) => setCardStatus(event.target.value)}
-              >
-                <option value="To Do">To Do</option>
-                <option value="In Progress">In Progress</option>
-                <option value="Done">Done</option>
-              </select>
-            </label>
-            <label>
-              Priority
-              <select
-                name="Priority"
-                value={priority}
-                onChange={(event) => setPriority(event.target.value)}
-              >
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-              </select>
-            </label>
-            <label>
-              Due Date
-              <input
-                name="CreatedDate"
-                type="date"
-                placeholder="Created Date"
-              />
-            </label>
-            <button type="submit">Create</button>
-            <button onClick={() => nav("/")}>X</button>
+            <br />
+            <div className="inline-container1">
+              <label>
+                Title
+                <br />
+                <input
+                  placeholder="Title"
+                  type="text"
+                  value={title}
+                  onChange={(event) => setTitle(event.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                Description
+                <br />
+                <textarea
+                  id="description-textarea"
+                  placeholder="Description"
+                  value={description}
+                  onChange={(event) => setDescription(event.target.value)}
+                  rows="4"
+                  cols="30"
+                ></textarea>
+              </label>
+            </div>
+            <div className="inline-container2">
+              <label>
+                <br />
+                Assignee
+                <br />
+                <input
+                  placeholder="Assignee"
+                  type="text"
+                  value={assignee}
+                  onChange={(event) => setAssignee(event.target.value)}
+                />
+              </label>
+
+              <label>
+                <br />
+                Status
+                <br />
+                <select
+                  name="Status"
+                  value={cardStatus}
+                  onChange={(event) => setCardStatus(event.target.value)}
+                >
+                  <option value="To Do">To Do</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Done">Done</option>
+                </select>
+              </label>
+              <label>
+                <br />
+                Priority
+                <br />
+                <select
+                  name="Priority"
+                  value={priority}
+                  onChange={(event) => setPriority(event.target.value)}
+                >
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </label>
+              <label>
+                <br />
+                Due Date
+                <br />
+                <input
+                  name="CreatedDate"
+                  type="date"
+                  placeholder="Created Date"
+                />
+              </label>
+            </div>
+            <button id="popup-submit-btn" type="submit">
+              Create
+            </button>
+            <button id="popup-close-btn" onClick={() => nav("/")}>
+              X
+            </button>
           </form>
         </div>
       </div>
