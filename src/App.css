@@ -94,6 +94,11 @@ main {
 #list-section {
   display: flex;
   height: 100%;
+  width: 88%;
+}
+
+#list:last-child {
+  margin-left: auto;
 }
 
 footer {
@@ -121,8 +126,12 @@ footer {
 #list-title {
   padding: 5px 5px 10px;
   margin-bottom: 5px;
-  height: 20px;
+  height: 35px;
   display: flex;
+}
+
+#list-title > h5 {
+  align-self: center;
 }
 
 .title-input {
@@ -458,7 +467,4 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 35px !important;
-}
-
-.select-dropdown {
 }

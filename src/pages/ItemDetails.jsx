@@ -13,10 +13,6 @@ export const ItemDetails = ({ cardData }) => {
       <div className="content-box card-details">
         <table>
           <tbody>
-            {/* <tr>
-            <td>Card-ID:</td>
-            <td>{shownCard.id}</td>
-          </tr> */}
             <tr>
               <td className="b">Title:</td>
               <td>{shownCard.title}</td>

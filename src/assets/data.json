@@ -109,4 +109,34 @@
     "createdDate": "2023-09-18",
     "dueDate": "2023-10-05"
   }
+  {
+    "id": "12",
+    "title": "Make Memes",
+    "description": "everything can be a meme if you think about it",
+    "assignee": "Daniel Hemyulin",
+    "status": "In Progress",
+    "priority": "High",
+    "createdDate": "2024-02-12",
+    "dueDate": "2024-10-05"
+  }
+  {
+    "id": "13",
+    "title": "Name the variable",
+    "description": "Everything Pizza",
+    "assignee": "Joshua George",
+    "status": "In Progress",
+    "priority": "High",
+    "createdDate": "2024-02-12",
+    "dueDate": "2024-10-05"
+  }
+  {
+    "id": "14",
+    "title": "Go to bed early",
+    "description": "Everything Pizza",
+    "assignee": "Joshua George",
+    "status": "In Progress",
+    "priority": "High",
+    "createdDate": "2024-02-12",
+    "dueDate": "2024-10-05"
+  }
 ]

@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 
 export default function SortedList({ cardData, setCardData }) {
-  const [priorityFilter, setPriorityFilter] = useState("");
-  const [dueDateFilter, setDueDateFilter] = useState("");
-  const [titleFilter, setTitleFilter] = useState("");
-  const [statusFilter, setStatusilter] = useState("");
-
   const options = [
     { value: "priority", label: "Priority" },
     { value: "title", label: "Title" },
@@ -66,18 +61,17 @@ export default function SortedList({ cardData, setCardData }) {
   return (
     <div id="list">
       <div id="list-title" className="select-dropdown-container">
-        <h5>SortedList</h5>
+        <h5>Sort by</h5>
         <Select
-          className="select-dropdown"
           options={options}
           onChange={(event) => sortBy(event.value)}
           styles={{
             control: (provided) => ({
               ...provided,
-              backgroundColor: "white",
+              backgroundColor: "#22272b",
               borderColor: "#9e9e9e",
               height: "10px",
-              width: "100px",
+              width: "150px",
               boxShadow: "none",
               fontSize: "10px",
               size: "10px",
@@ -104,8 +98,8 @@ export default function SortedList({ cardData, setCardData }) {
               color: state.isSelected ? "white" : "black",
               backgroundColor: state.isSelected ? "#3f51b5" : "white",
               "&:hover": {
-                backgroundColor: "#3f51b5",
-                color: "white",
+                backgroundColor: "#22272b",
+                color: "#b2b2b2",
               },
             }),
             // Add more custom styles for other parts of the select here

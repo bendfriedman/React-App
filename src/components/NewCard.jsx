@@ -76,7 +76,7 @@ export const NewCard = ({ cardData, setCardData }) => {
                     onChange={(event) => setDescription(event.target.value)}
                     rows="4"
                     cols="40"
-                    maxlength="100"
+                    maxLength="100"
                   ></textarea>
                 </label>
               </div>

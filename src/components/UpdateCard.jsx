@@ -31,15 +31,10 @@ export const UpdateCard = ({ cardData, setCardData }) => {
   }, []);
 
   const handleUpdateCard = (event) => {
-    // const today = new Date();
-    // const month = today.getMonth() + 1;
-    // const year = today.getFullYear();
-    // const date = today.getDate();
-    // const currentDate = year + "/" + month + "/" + date;
     event.preventDefault();
 
     const duplicateCardData = cardData.map((card) => {
-      if (card.id === cardId) {
+      if (card.id == cardId) {
         const updatedCard = {
           id: card.id,
           title: title,
@@ -50,6 +45,7 @@ export const UpdateCard = ({ cardData, setCardData }) => {
           createdDate: card.createdDate,
           dueDate: dueDate,
         };
+
         return updatedCard;
       }
       return card;
@@ -71,7 +67,10 @@ export const UpdateCard = ({ cardData, setCardData }) => {
         <div className="inside-popup">
           <div className="popup-header">
             <h2>CREATE NEW CARD</h2>
-            <button className="delete-btn b" onClick={() => nav("/")}>
+            <button
+              className="delete-btn b"
+              onClick={() => nav(`/card/${cardId}`)}
+            >
               X
             </button>
           </div>
@@ -100,7 +99,7 @@ export const UpdateCard = ({ cardData, setCardData }) => {
                     onChange={(event) => setDescription(event.target.value)}
                     rows="4"
                     cols="40"
-                    maxlength="100"
+                    maxLength="100"
                   ></textarea>
                 </label>
               </div>
