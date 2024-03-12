@@ -1,5 +1,6 @@
 import { BoardHeader } from "../components/BoardHeader";
 import List from "../components/List";
+import SortedList from "../components/SortedList";
 
 export const HomePage = ({ cardData, setCardData }) => {
   return (
@@ -14,7 +15,7 @@ export const HomePage = ({ cardData, setCardData }) => {
             status="In Progress"
           />
           <List cardData={cardData} setCardData={setCardData} status="Done" />
-          {/* <SortedList cardData={cardData} setCardData={setCardData} /> */}
+           <SortedList cardData={cardData} setCardData={setCardData} /> 
         </section>
       </div>
     </>

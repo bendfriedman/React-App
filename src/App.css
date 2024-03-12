@@ -453,3 +453,12 @@ footer {
 .details-priority div {
   margin-right: 15px;
 }
+
+.select-dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  height: 35px !important;
+}
+
+.select-dropdown {
+}
