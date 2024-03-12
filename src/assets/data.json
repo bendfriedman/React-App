@@ -108,35 +108,35 @@
     "priority": "Medium",
     "createdDate": "2023-09-18",
     "dueDate": "2023-10-05"
-  }
-  {
+  },
+   {
     "id": "12",
+    "title": "Name variables",
+    "description": "everything could be pizza",
+    "assignee": "Joshua George",
+    "status": "Done",
+    "priority": "High",
+    "createdDate": "2024-02-18",
+    "dueDate": "2024-05-05"
+  },
+  {
+    "id": "13",
     "title": "Make Memes",
-    "description": "everything can be a meme if you think about it",
+    "description": "everything could be pizza or memes",
     "assignee": "Daniel Hemyulin",
     "status": "In Progress",
     "priority": "High",
-    "createdDate": "2024-02-12",
-    "dueDate": "2024-10-05"
-  }
-  {
-    "id": "13",
-    "title": "Name the variable",
-    "description": "Everything Pizza",
-    "assignee": "Joshua George",
-    "status": "In Progress",
-    "priority": "High",
-    "createdDate": "2024-02-12",
-    "dueDate": "2024-10-05"
-  }
+    "createdDate": "2024-03-06",
+    "dueDate": "2024-05-06"
+  },
   {
     "id": "14",
-    "title": "Go to bed early",
-    "description": "Everything Pizza",
-    "assignee": "Joshua George",
-    "status": "In Progress",
+    "title": "Send good coffee to everyone",
+    "description": "good things should be shared",
+    "assignee": "Carolina Irene",
+    "status": "To Do",
     "priority": "High",
-    "createdDate": "2024-02-12",
-    "dueDate": "2024-10-05"
+    "createdDate": "2024-03-03",
+    "dueDate": "2024-04-10"
   }
 ]

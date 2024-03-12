@@ -51,7 +51,7 @@ export const ItemDetails = ({ cardData }) => {
 
         <div>
           <Link to={`/card-edit/${shownCard.id}`}>
-            <button id="edit-card-btn">Edit the Card Info</button>
+            <button id="edit-card-btn">Edit Card</button>
           </Link>
         </div>
       </div>

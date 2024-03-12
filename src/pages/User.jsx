@@ -1,11 +1,15 @@
 import { BoardHeader } from "../components/BoardHeader";
+import coolGif from "../assets/images/webdev.gif"
 
 export const User = () => {
   return (
     <div>
-      <BoardHeader boardTitle={`User - "user not found"`} />
+      <BoardHeader boardTitle={`Ben Fried`} />
       <div className="content-box">
-        <div>user not found</div>
+        <div>
+          <img src={coolGif} alt="web developer" />
+          <br />
+          Senior Web Developer</div>
       </div>
     </div>
   );

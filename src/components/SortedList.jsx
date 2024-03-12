@@ -76,33 +76,41 @@ export default function SortedList({ cardData, setCardData }) {
               fontSize: "10px",
               size: "10px",
               "&:hover": {
-                borderColor: "#3f51b5",
+                borderColor: "#00d8ff",
               },
             }),
             valueContainer: (base) => ({
               ...base,
               height: "20px",
-              padding: "0 6px", // Adjust padding to align the text and placeholder
+              padding: "0 6px",
+              background: "#22272b",
             }),
             input: (base) => ({
               ...base,
               height: "10px",
               margin: "0px",
-              padding: "0px", // Remove padding and margin
+              padding: "0px",
             }),
             indicatorsContainer: (base) => ({
               ...base,
             }),
+            menu: (base) => ({
+              ...base,
+              backgroundColor: "#grey",
+            }),
             option: (provided, state) => ({
               ...provided,
               color: state.isSelected ? "white" : "black",
-              backgroundColor: state.isSelected ? "#3f51b5" : "white",
+              backgroundColor: state.isSelected ? "#22272b" : "	#22272b",
               "&:hover": {
                 backgroundColor: "#22272b",
                 color: "#b2b2b2",
               },
             }),
-            // Add more custom styles for other parts of the select here
+            singleValue: (provided, state) => ({
+              ...provided,
+              color: "#00d8ff",
+            }),
           }}
         ></Select>
       </div>

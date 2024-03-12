@@ -1,10 +1,10 @@
 import "./App.css";
-import logo from "./assets/react.svg";
+import newlogo from "./assets/newlogo.png";
 import { Route, Routes, Link } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
-import userImg from "./assets/images/user2.png";
+import  userImg from "./assets/images/Ben-profile.jpg";
 import { ItemDetails } from "./pages/ItemDetails";
 import data from "./assets/data.json";
 import { useState } from "react";
@@ -19,7 +19,7 @@ function App() {
     <>
       <header>
         <Link to="/">
-          <img id="logo" src={logo} alt="image of logo" />
+          <img id="newlogo" src={newlogo} alt="image of logo" />
         </Link>
         <h1>React App</h1>
         <div></div>
