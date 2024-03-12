@@ -11,7 +11,12 @@ export default function SortedList({ cardData, setCardData }) {
     { value: "status", label: "Status" },
     { value: "dueDate", label: "Due Date" },
   ];
+  const [cardList, setCardList] = useState(cardData);
 
+  useEffect(() => {
+    setCardList(cardData);
+  }, [cardData]);
+  
   const sortBy = (value) => {
     console.log(value);
     if (value === "priority") {
@@ -23,7 +28,7 @@ export default function SortedList({ cardData, setCardData }) {
       const orderedCardData = [...cardData].sort((card1, card2) => {
         return priorityObj[card1.priority] - priorityObj[card2.priority];
       });
-      setCardData(orderedCardData);
+      setCardList(orderedCardData);
     } else if (value === "title") {
       const orderedCardData = [...cardData].sort((card1, card2) => {
         if (card1.title < card2.title) {
@@ -34,7 +39,7 @@ export default function SortedList({ cardData, setCardData }) {
         }
         return 0;
       });
-      setCardData(orderedCardData);
+      setCardList(orderedCardData);
     } else if (value === "status") {
       const statusObj = {
         "To Do": 0,
@@ -44,7 +49,7 @@ export default function SortedList({ cardData, setCardData }) {
       const orderedCardData = [...cardData].sort((card1, card2) => {
         return statusObj[card1.status] - statusObj[card2.status];
       });
-      setCardData(orderedCardData);
+      setCardList(orderedCardData);
     } else if (value === "dueDate") {
       const orderedCardData = [...cardData].sort((card1, card2) => {
         if (card1.dueDate < card2.dueDate) {
@@ -55,7 +60,7 @@ export default function SortedList({ cardData, setCardData }) {
         }
         return 0;
       });
-      setCardData(orderedCardData);
+      setCardList(orderedCardData);
     }
   };
   return (
@@ -115,7 +120,7 @@ export default function SortedList({ cardData, setCardData }) {
         ></Select>
       </div>
       <div id="list-items">
-        {cardData.map((dataElement) => {
+        {cardList.map((dataElement) => {
           return (
             <Link to={`/card/${dataElement.id}`} key={dataElement.id}>
               <Card
